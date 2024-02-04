@@ -1,6 +1,6 @@
 {
     "_id": "bearTrader",
-    "working": true,
+    "working": false,
     "availableInRaid": false,
     "items_buy": {
         "category": [

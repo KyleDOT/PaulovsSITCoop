@@ -15,10 +15,8 @@ import { HashUtil } from "@spt-aki/utils/HashUtil";
 import fs from "fs";
 import path from "path";
 import { DependencyContainer } from "tsyringe";
-import { BearTrader } from "./BearTrader";
 import { CoopGroupTrader } from "./CoopGroupTrader";
 import { FluentAssortConstructor } from "./FluentTraderAssortCreator";
-import { UsecTrader } from "./UsecTrader";
 
 export class SITCustomTraders implements IPreAkiLoadMod, IPostDBLoadMod
 {
@@ -35,7 +33,7 @@ export class SITCustomTraders implements IPreAkiLoadMod, IPostDBLoadMod
 
         this.databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
 
-        SITCustomTraders.traders.push(new CoopGroupTrader(), new UsecTrader(), new BearTrader());
+        SITCustomTraders.traders.push(new CoopGroupTrader());
         // Initialize Custom Traders
         for(const t of SITCustomTraders.traders) {
             t.preAkiLoad(container);

@@ -1,6 +1,6 @@
 {
     "_id": "usecTrader",
-    "working": true,
+    "working": false,
     "availableInRaid": false,
     "items_buy": {
         "category": [
